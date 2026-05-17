@@ -1,0 +1,203 @@
+/* StudentExplore modal overlay - FIXED CENTERING - DARK MODE */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  background: var(--c-surface-dark, #1e1e2f);
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: modalSlideIn 0.2s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  background: var(--c-surface-dark, #1e1e2f);
+  flex-shrink: 0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--c-text-dark, #e2e8f0);
+}
+
+.modal-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(51, 65, 85, 0.3);
+  cursor: pointer;
+  font-size: 20px;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  background: rgba(51, 65, 85, 0.6);
+  transform: scale(1.05);
+  color: #cbd5e1;
+}
+
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+  background: var(--c-surface-dark, #1e1e2f);
+}
+
+.modal-body h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.5rem;
+  color: var(--c-text-dark, #e2e8f0);
+}
+
+.modal-body .favorite-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.modal-body .favorite-meta span {
+  font-size: 0.875rem;
+  color: var(--c-text-2-dark, #94a3b8);
+}
+
+.modal-body .tag-row {
+  margin: 16px 0;
+}
+
+.modal-body .projects-list,
+.modal-body .students-list,
+.modal-body .courses-list {
+  margin: 20px 0;
+}
+
+.modal-body ul {
+  margin: 8px 0 0 20px;
+  padding: 0;
+}
+
+.modal-body li {
+  margin: 8px 0;
+  color: #cbd5e1;
+}
+
+.modal-actions {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(51, 65, 85, 0.5);
+  background: #15151f;
+  flex-shrink: 0;
+}
+
+/* Responsive design for modal */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 95%;
+    max-height: 95vh;
+  }
+  
+  .modal-header {
+    padding: 16px 20px;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-actions {
+    padding: 12px 20px;
+  }
+}
+
+/* Instructor card styles */
+.instructor-rating {
+  margin-left: auto;
+}
+
+.instructor-details {
+  margin: 12px 0;
+}
+
+.courses-taught {
+  margin: 8px 0;
+}
+
+.courses-taught strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+  color: var(--c-text-2-dark, #94a3b8);
+}
+
+/* Flag Button - Fix hover state */
+.flag-submit-btn {
+  padding: 10px 20px;
+  color: var(--c-surface) !important;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.flag-submit-btn:not(:disabled) {
+  background: #bd7575 !important;
+}
+
+.flag-submit-btn:not(:disabled):hover {
+  background: #fe9595 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.flag-submit-btn:disabled {
+  background: #fca5a5 !important;
+  cursor: not-allowed;
+}

@@ -1,0 +1,45 @@
+/* RoleStyles — shared role card styles, uses theme tokens */
+@import './styles/theme.css';
+
+.role-selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--navbar-h));
+  padding: var(--sp-8);
+}
+.role-selection-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: var(--sp-10);
+  text-align: center;
+  color: var(--c-text);
+}
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-5);
+  max-width: 520px;
+  width: 100%;
+}
+.role-card {
+  background: var(--c-surface);
+  border: 2px solid var(--c-border);
+  border-radius: var(--r-2xl);
+  padding: var(--sp-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+  cursor: pointer;
+  transition: all var(--t-base);
+  box-shadow: var(--sh-xs);
+}
+.role-card:hover {
+  border-color: var(--c-primary);
+  box-shadow: 0 4px 20px rgba(79,70,229,0.18);
+  transform: translateY(-4px);
+}
+.role-card-icon { font-size: 2.5rem; }
+.role-card-name { font-size: 1rem; font-weight: 700; color: var(--c-text); }

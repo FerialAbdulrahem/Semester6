@@ -1,0 +1,452 @@
+
+export const instructorProfileData = {
+  id: "inst_001",
+  name: "Dr. Aya Salama",
+  title: "Associate Professor",
+  department: "Media Engineering and Technology",
+  email: "aya.salama@guc.edu.eg",
+  supervisedProjects: [
+    {
+      id: "bp_104",
+      title: "AI-Driven Healthcare App",
+      type: "Bachelor Project",
+      students: ["Ahmed", "Sara"],
+      status: "Awaiting Review",
+      thesisSubmitted: true
+    },
+    {
+      id: "cp_201",
+      title: "Project Portfolio Web Platform",
+      type: "Course Project",
+      course: "Software Engineering",
+      students: ["Youssef", "Karim"],
+      status: "In Progress",
+      thesisSubmitted: false
+    }
+  ],
+  pendingReviews: 3,
+};
+export const INTERNSHIPS = [
+  // TechCorp Egypt
+  { id: 1,  company: "TechCorp Egypt",  companyId: 1, student: "Ahmed Mostafa",   studentId: 1, role: "Frontend Developer Intern",    status: "completed", year: 2025, month: 6  },
+  { id: 2,  company: "TechCorp Egypt",  companyId: 1, student: "Sara Ali",        studentId: 2, role: "Frontend Developer Intern",    status: "completed", year: 2025, month: 6  },
+  { id: 3,  company: "TechCorp Egypt",  companyId: 1, student: "Youssef Khaled", studentId: 3, role: "Backend Developer Intern",     status: "completed", year: 2025, month: 9  },
+  { id: 4,  company: "TechCorp Egypt",  companyId: 1, student: "Nour Ibrahim",   studentId: 8, role: "Backend Developer Intern",     status: "ongoing",   year: 2026, month: 2  },
+ 
+  // Innovate Labs
+  { id: 5,  company: "Innovate Labs",   companyId: 2, student: "Lina Saad",      studentId: 9, role: "Data Science Intern",          status: "completed", year: 2025, month: 6  },
+  { id: 6,  company: "Innovate Labs",   companyId: 2, student: "Omar Fares",     studentId: 10, role: "Research Intern",             status: "ongoing",   year: 2026, month: 1  },
+ 
+  // Cairo Digital
+  { id: 7,  company: "Cairo Digital",  companyId: 3, student: "Ahmed Mostafa",   studentId: 1, role: "UI/UX Intern",                 status: "completed", year: 2024, month: 9  },
+  { id: 8,  company: "Cairo Digital",  companyId: 3, student: "Mona Tarek",     studentId: 11, role: "Social Media Intern",          status: "completed", year: 2025, month: 3  },
+  { id: 9,  company: "Cairo Digital",  companyId: 3, student: "Kamal Nabil",    studentId: 12, role: "Content Intern",               status: "ongoing",   year: 2026, month: 3  },
+ 
+  // NileSoft
+  { id: 10, company: "NileSoft",        companyId: 4, student: "Sara Ali",        studentId: 2, role: "QA Intern",                   status: "completed", year: 2024, month: 6  },
+  { id: 11, company: "NileSoft",        companyId: 4, student: "Hassan Emad",    studentId: 13, role: "DevOps Intern",               status: "completed", year: 2025, month: 9  },
+];
+
+
+export const APPLYINGEMPLOYERS = [
+  {
+    id: 1,
+    company: "TechCorp Egypt",
+    companyEmail: "hr@techcorp.eg",
+    industry: "Software & Technology",
+    website: "www.techcorp.eg",
+    address: "Smart Village, Cairo",
+    bio: "TechCorp Egypt is a leading software development company specializing in enterprise solutions and mobile applications. We have been operating in Egypt for over 10 years and are looking for talented interns to join our team.",
+    docs: ["tax_certificate.pdf", "trade_register.pdf"],
+    status: "pending",
+    date: "2026-04-01",
+    pic: "https://randomuser.me/api/portraits/lego/1.jpg",
+  },
+  {
+    id: 2,
+    company: "Innovate Labs",
+    companyEmail: "careers@innovatelabs.com",
+    industry: "Research & Development",
+    website: "www.innovatelabs.com",
+    address: "Maadi, Cairo",
+    bio: "Innovate Labs is a cutting-edge R&D center focused on AI, machine learning, and emerging technologies. We provide innovative solutions for businesses across the Middle East.",
+    docs: ["tax_certificate.pdf"],
+    status: "pending",
+    date: "2026-04-05",
+    pic: "https://randomuser.me/api/portraits/lego/2.jpg",
+  },
+  {
+    id: 3,
+    company: "Cairo Digital",
+    companyEmail: "info@cairodigital.io",
+    industry: "Digital Marketing",
+    website: "www.cairodigital.io",
+    address: "New Cairo, Cairo",
+    bio: "Cairo Digital is a full-service digital marketing agency helping brands grow online. We specialize in SEO, social media, and content marketing strategies.",
+    docs: ["tax_certificate.pdf", "company_reg.pdf"],
+    status: "accepted",
+    date: "2026-03-20",
+    pic: "https://randomuser.me/api/portraits/lego/3.jpg",
+  },
+  {
+    id: 4,
+    company: "NileSoft",
+    companyEmail: "admin@nilesoft.com",
+    industry: "Enterprise Software",
+    website: "www.nilesoft.com",
+    address: "Heliopolis, Cairo",
+    bio: "NileSoft develops enterprise resource planning (ERP) and business management software for companies across Africa and the Middle East.",
+    docs: ["tax_certificate.pdf"],
+    status: "rejected",
+    date: "2026-03-18",
+    pic: "https://randomuser.me/api/portraits/lego/4.jpg",
+  },
+  {
+    id: 5,
+    company: "Alex Tech Solutions",
+    companyEmail: "hr@alextech.com",
+    industry: "IT Consulting",
+    website: "www.alextech.com",
+    address: "Alexandria, Egypt",
+    bio: "Alex Tech Solutions provides IT consulting, cloud services, and cybersecurity solutions to small and medium-sized businesses throughout Egypt.",
+    docs: ["tax_certificate.pdf", "trade_register.pdf", "company_profile.pdf"],
+    status: "pending",
+    date: "2026-04-10",
+    pic: "https://randomuser.me/api/portraits/lego/5.jpg",
+  },
+  {
+    id: 6,
+    company: "Green Energy Egypt",
+    companyEmail: "careers@greenenergy.eg",
+    industry: "Renewable Energy",
+    website: "www.greenenergy.eg",
+    address: "10th of Ramadan City, Cairo",
+    bio: "Green Energy Egypt is a leader in solar and renewable energy solutions. We design and install solar panels for residential and commercial buildings across Egypt.",
+    docs: ["tax_certificate.pdf", "trade_register.pdf"],
+    status: "pending",
+    date: "2026-04-12",
+    pic: "https://randomuser.me/api/portraits/lego/6.jpg",
+  },
+];
+
+
+
+export const EMPLOYERS = [
+  { id: 1, company: "TechCorp Egypt",  email: "hr@techcorp.eg",          docs: ["tax_certificate.pdf", "trade_register.pdf"], status: "pending",  date: "2026-04-01" },
+  { id: 2, company: "Innovate Labs",   email: "careers@innovatelabs.com", docs: ["tax_certificate.pdf"],                       status: "pending",  date: "2026-04-05" },
+  { id: 3, company: "Cairo Digital",  email: "info@cairodigital.io",     docs: ["tax_certificate.pdf", "company_reg.pdf"],    status: "accepted", date: "2026-03-20" },
+  { id: 4, company: "NileSoft",        email: "admin@nilesoft.com",       docs: ["tax_certificate.pdf"],                       status: "rejected", date: "2026-03-18" },
+];
+
+export const USERS = [
+  { id: 1, name: "Ahmed Mostafa",  email: "ahmed.m@student.guc.edu.eg",  role: "Student",           active: true,  pic: "https://randomuser.me/api/portraits/men/1.jpg" },
+  { id: 2, name: "Sara Ali",       email: "sara.ali@student.guc.edu.eg",  role: "Student",           active: true,  pic: "https://randomuser.me/api/portraits/women/2.jpg" },
+  { id: 3, name: "Youssef Khaled", email: "youssef.k@student.guc.edu.eg", role: "Student",           active: false, pic: "https://randomuser.me/api/portraits/men/3.jpg" },
+  { id: 4, name: "Dr. Mervat",     email: "mervat@guc.edu.eg",            role: "Course Instructor", active: true,  pic: "https://randomuser.me/api/portraits/women/44.jpg" },
+  { id: 5, name: "Dr. Aya Salama", email: "aya.salama@guc.edu.eg",        role: "Course Instructor", active: true,  pic: null },
+  { id: 6, name: "TechCorp Egypt", email: "hr@techcorp.eg",               role: "Employer",          active: true,  pic: "https://randomuser.me/api/portraits/lego/1.jpg" },
+  { id: 7, name: "Admin User",     email: "admin@guc.edu.eg",             role: "Administrator",     active: true, pic:null},
+  { id: 8, name: "Dr. Omar",       email: "omar.ali@guc.edu.eg",          role: "Course Instructor", active: true,  pic: "https://randomuser.me/api/portraits/men/8.jpg" },
+];
+
+export const COURSES = [
+  { id: 1, name: "Software Engineering", code: "CSEN701", instructorId: 4, instructorName: "Dr. Mervat" },
+  { id: 2, name: "Computer Networks",    code: "CSEN601", instructorId: 5, instructorName: "Dr. Aya Salama" },
+  { id: 3, name: "Database Systems",     code: "CSEN501", instructorId: 8, instructorName: "Dr. Omar" },
+  { id: 4, name: "AI Chatbot Thesis",     code: "Bachelor Project", instructorId: 5, instructorName: "Dr. Aya Salama" }, // AI Chatbot instructor
+  { id: 5, name: "Blockchain Voting System",     code: "Bachelor Project", instructorId: 8, instructorName: "Dr. Omar" }, // Blockchain instructor
+];
+
+export const LINK_REQUESTS = [
+  { id: 1, instructor: "Dr. Mervat",     email: "mervat@guc.edu.eg",     course: "Software Engineering", type: "link",   date: "2026-04-10", status: "pending"  },
+  { id: 2, instructor: "Dr. Aya Salama", email: "aya.salama@guc.edu.eg", course: "Computer Networks",    type: "unlink", date: "2026-04-12", status: "pending"  },
+  { id: 3, instructor: "Dr. Omar",       email: "omar.h@guc.edu.eg",     course: "Database Systems",     type: "link",   date: "2026-04-15", status: "accepted" },
+];
+export const PROJECTS = [
+  { 
+    id: 1, 
+    title: "Smart Campus App", 
+    student: "Ahmed Mostafa",
+    studentId: 1,
+    studentPic: "https://randomuser.me/api/portraits/men/1.jpg",
+    course: "Software Engineering", 
+    instructorId: 4,
+    instructorName: "Dr. Mervat",
+    githubLink: "https://github.com/ahmed/smart-campus",
+    programmingLanguages: ["React Native", "Node.js", "MongoDB", "Express"],
+    demoVideo: "https://youtube.com/watch?v=smartcampus",
+    projectReport: "/reports/smart_campus.pdf",
+    createdAt: "2025-03-15",
+    visibility: "public",
+    isVisibleOnPortfolio: true,
+    active: true,  
+    flagged: true,  
+    flagReason: "Potential plagiarism",
+    rating: 1.0
+  },
+  { 
+    id: 2, 
+    title: "E-Learning Platform",
+    student: "Sara Ali",
+    studentId: 2,       
+    studentPic: "https://randomuser.me/api/portraits/women/2.jpg",
+    course: "Software Engineering",
+    instructorId: 4,
+    instructorName: "Dr. Mervat",
+    githubLink: "https://github.com/sara/elearning",
+    programmingLanguages: ["React", "JavaScript", "MongoDB", "Express"],
+    demoVideo: "https://youtube.com/watch?v=elearning",
+    projectReport: "/reports/elearning.pdf",
+    createdAt: "2024-01-20",
+    visibility: "public",
+    isVisibleOnPortfolio: false,
+    active: true,  
+    flagged: false, 
+    flagReason: "",
+    rating: 4.0
+  },
+  { 
+    id: 3, 
+    title: "Network Visualizer",    
+    student: "Nour Ibrahim",
+    studentId: 8,   
+    studentPic: "https://randomuser.me/api/portraits/women/9.jpg",
+    course: "Computer Networks",
+    instructorId: 5,
+    instructorName: "Dr. Aya Salama",
+    githubLink: "https://github.com/nour/network-viz",
+    programmingLanguages: ["Python", "D3.js", "Flask"],
+    demoVideo: "https://youtube.com/watch?v=networkviz",
+    projectReport: "/reports/network_viz.pdf",
+    createdAt: "2025-04-20",
+    visibility: "private",
+    isVisibleOnPortfolio: true,
+    active: true,  
+    flagged: false, 
+    flagReason: "",
+    rating: 4.5
+  },
+  { 
+    id: 4, 
+    title: "AI Chatbot Thesis",     
+    student: "Omar Fares",
+    studentId: 10,   
+    studentPic: "https://randomuser.me/api/portraits/men/10.jpg",
+    course: "Bachelor Project",
+    instructorId: 5,
+    instructorName: "Dr. Aya Salama",
+    githubLink: "https://github.com/omar/ai-chatbot",
+    programmingLanguages: ["Python", "TensorFlow", "Flask", "React"],
+    demoVideo: "https://youtube.com/watch?v=aichatbot",
+    projectReport: "/reports/ai_chatbot.pdf",
+    createdAt: "2025-05-10",
+    visibility: "public",
+    isVisibleOnPortfolio: true,
+    active: true,  
+    flagged: false, 
+    flagReason: "",
+    rating: 5.0
+  },
+  { 
+    id: 5, 
+    title: "Library Management DB", 
+    student: "Youssef Khaled",
+    studentId: 3, 
+    studentPic: "https://randomuser.me/api/portraits/men/3.jpg",
+    course: "Database Systems",
+    instructorId: 8,
+    instructorName: "Dr. Omar",
+    githubLink: "https://github.com/youssef/library-db",
+    programmingLanguages: ["SQL", "PHP", "JavaScript", "Bootstrap"],
+    demoVideo: "https://youtube.com/watch?v=librarydb",
+    projectReport: "/reports/library_db.pdf",
+    createdAt: "2025-02-28",
+    visibility: "public",
+    isVisibleOnPortfolio: false,
+    active: false, 
+    flagged: true,  
+    flagReason: "Copyright violation",
+    rating: 2.0
+  },
+  { 
+    id: 6, 
+    title: "Weather Dashboard App",
+    student: "Lina Saad",
+    studentId: 9,
+    studentPic: "https://randomuser.me/api/portraits/women/11.jpg",
+    course: "Software Engineering",
+    instructorId: 4,
+    instructorName: "Dr. Mervat",
+    githubLink: "https://github.com/lina/weather-dashboard",
+    programmingLanguages: ["React", "CSS", "OpenWeather API"],
+    demoVideo: "https://youtube.com/watch?v=weatherdashboard",
+    projectReport: "/reports/weather_dashboard.pdf",
+    createdAt: "2025-06-15",
+    visibility: "private",
+    isVisibleOnPortfolio: true,
+    active: true,
+    flagged: false,
+    flagReason: "",
+    rating: 4.2
+  },
+  { 
+    id: 7, 
+    title: "Blockchain Voting System",
+    student: "Kamal Nabil",
+    studentId: 12,
+    studentPic: "https://randomuser.me/api/portraits/men/12.jpg",
+    course: "Bachelor Project",
+    instructorId: 8,
+    instructorName: "Dr. Omar",
+    githubLink: "https://github.com/kamal/blockchain-voting",
+    programmingLanguages: ["Solidity", "React", "Web3.js", "Node.js"],
+    demoVideo: "https://youtube.com/watch?v=blockchainvoting",
+    projectReport: "/reports/blockchain_voting.pdf",
+    createdAt: "2025-07-01",
+    visibility: "public",
+    isVisibleOnPortfolio: true,
+    active: true,
+    flagged: false,
+    flagReason: "",
+    rating: 4.8
+  }
+];
+
+export const APPEALS = [
+  { id: 1, student: "Ahmed Mostafa",  project: "Smart Campus App",      message: "Our project is fully original. GitHub commits prove individual contributions.", date: "2026-04-16", status: "pending"  },
+  { id: 2, student: "Youssef Khaled", project: "Library Management DB", message: "The uploaded report was a draft, not the final version. Please reactivate.",   date: "2026-04-17", status: "reviewed" },
+];
+
+export const PORTFOLIOS = [
+  {
+    id: 1,
+    name: "Ahmed Mostafa",
+    email: "ahmed.m@student.guc.edu.eg",
+    major: "Computer Science",
+    about: "CS student passionate about mobile development, scalable backends, and building campus-life tools that make a real difference.",
+    skills: ["React Native", "Node.js", "MongoDB", "Express"],
+    projects: [
+      {
+        id: 1,
+        title: "Smart Campus App",
+        course: "Software Engineering",
+        date: "2025-03-15",
+        rating: 1.0,
+        githubLink: "https://github.com/ahmed/smart-campus",
+        demoVideo: "https://youtube.com/watch?v=smartcampus",
+        programmingLanguages: ["React Native", "Node.js", "MongoDB", "Express"],
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Sara Ali",
+    email: "sara.ali@student.guc.edu.eg",
+    major: "Media Engineering",
+    about: "Media Engineering student focused on frontend design, interactive UI, and building accessible e-learning experiences.",
+    skills: ["React", "JavaScript", "MongoDB", "Express"],
+    projects: [
+      {
+        id: 2,
+        title: "E-Learning Platform",
+        course: "Software Engineering",
+        date: "2024-01-20",
+        rating: 4.0,
+        githubLink: "https://github.com/sara/elearning",
+        demoVideo: "https://youtube.com/watch?v=elearning",
+        programmingLanguages: ["React", "JavaScript", "MongoDB", "Express"],
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Youssef Khaled",
+    email: "youssef.k@student.guc.edu.eg",
+    major: "Computer Science",
+    about: "Full-stack developer with a love for databases and clean architecture. Currently exploring GraphQL and cloud deployments.",
+    skills: ["SQL", "PHP", "JavaScript", "Bootstrap"],
+    projects: [],   // no active+visible projects — shows empty state in detail view
+  },
+  {
+    id: 8,
+    name: "Nour Ibrahim",
+    email: "nour.i@student.guc.edu.eg",
+    major: "Computer Engineering",
+    about: "Network enthusiast and data-visualisation lover building tools that make complex systems legible at a glance.",
+    skills: ["Python", "D3.js", "Flask"],
+    projects: [
+      {
+        id: 3,
+        title: "Network Visualizer",
+        course: "Computer Networks",
+        date: "2025-04-20",
+        rating: 4.5,
+        githubLink: "https://github.com/nour/network-viz",
+        demoVideo: "https://youtube.com/watch?v=networkviz",
+        programmingLanguages: ["Python", "D3.js", "Flask"],
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: "Lina Saad",
+    email: "lina.s@student.guc.edu.eg",
+    major: "Informatics",
+    about: "Informatics student combining design thinking and data science to create intuitive, insight-driven dashboards.",
+    skills: ["React", "CSS", "OpenWeather API"],
+    projects: [
+      {
+        id: 6,
+        title: "Weather Dashboard App",
+        course: "Software Engineering",
+        date: "2025-06-15",
+        rating: 4.2,
+        githubLink: "https://github.com/lina/weather-dashboard",
+        demoVideo: "https://youtube.com/watch?v=weatherdashboard",
+        programmingLanguages: ["React", "CSS", "OpenWeather API"],
+      },
+    ],
+  },
+  {
+    id: 10,
+    name: "Omar Fares",
+    email: "omar.f@student.guc.edu.eg",
+    major: "Computer Science",
+    about: "AI researcher exploring conversational agents, transformer models, and natural language processing for the Arabic web.",
+    skills: ["Python", "TensorFlow", "Flask", "React"],
+    projects: [
+      {
+        id: 4,
+        title: "AI Chatbot Thesis",
+        course: "Bachelor Project",
+        date: "2025-05-10",
+        rating: 5.0,
+        githubLink: "https://github.com/omar/ai-chatbot",
+        demoVideo: "https://youtube.com/watch?v=aichatbot",
+        programmingLanguages: ["Python", "TensorFlow", "Flask", "React"],
+      },
+    ],
+  },
+  {
+    id: 12,
+    name: "Kamal Nabil",
+    email: "kamal.n@student.guc.edu.eg",
+    major: "Computer Engineering",
+    about: "Blockchain and decentralised-systems advocate building trustless applications on Ethereum and exploring Web3 infrastructure.",
+    skills: ["Solidity", "React", "Web3.js", "Node.js"],
+    projects: [
+      {
+        id: 7,
+        title: "Blockchain Voting System",
+        course: "Bachelor Project",
+        date: "2025-07-01",
+        rating: 4.8,
+        githubLink: "https://github.com/kamal/blockchain-voting",
+        demoVideo: "https://youtube.com/watch?v=blockchainvoting",
+        programmingLanguages: ["Solidity", "React", "Web3.js", "Node.js"],
+      },
+    ],
+  },
+];
+ export const ALL_MAJORS = [...new Set(PORTFOLIOS.map(p => p.major))].sort();
+export const ALL_SKILLS = [...new Set(PORTFOLIOS.flatMap(p => p.skills))].sort();

@@ -1,0 +1,417 @@
+/* Page Layout */
+body {
+  background: #f9fafb;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.page-container {
+  padding: 24px;
+}
+
+.internship-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header */
+.internship-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.internship-header h1 {
+  margin: 0;
+}
+
+/* Buttons (Base) */
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Primary Buttons */
+.add-internship-btn,
+.submit-btn {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+}
+
+.add-internship-btn:hover,
+.submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.archive-btn {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+}
+
+.archive-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Edit Button */
+.edit-btn {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.edit-btn:hover {
+  background: #bae6fd;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px; 
+  align-items: center;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+/* Confirm Delete */
+.confirm-delete-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.confirm-delete-btn:hover {
+  background: #b91c1c;
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.3);
+}
+
+/* Cancel Buttons */
+.cancel-btn,
+.confirm-cancel-btn {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.cancel-btn:hover,
+.confirm-cancel-btn:hover {
+  background: #e5e7eb;
+}
+
+/* Small Add Buttons */
+.add-skill-btn,
+.add-language-btn {
+  background: #ecfeff;
+  color: #0e7490;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.add-skill-btn:hover,
+.add-language-btn:hover {
+  background: #cffafe;
+}
+
+/* Sections */
+.filters-section,
+.empty-state,
+.internship-card,
+.modal {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+}
+
+.filters-section,
+.empty-state {
+  padding: 16px;
+}
+
+/* Inputs */
+.filter-group,
+.skills-input-group,
+.languages-input-group,
+.form-actions,
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-input,
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* Grid */
+.internships-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.internship-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.2s ease;
+}
+
+.internship-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Meta */
+.card-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-active { background: #d1fae5; color: #065f46; }
+.status-upcoming { background: #fef3c7; color: #92400e; }
+.status-expired { background: #fee2e2; color: #991b1b; }
+
+/* Tags */
+.skills-tags,
+.languages-tags,
+.skills-list,
+.languages-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.skill-tag,
+.language-tag,
+.skill-item,
+.language-item {
+  background: #f3f4f6;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+/* Remove buttons */
+.remove-skill,
+.remove-language {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  z-index: 50;
+}
+
+/* Modal */
+.modal {
+  width: min(760px, 100%);
+  padding: 24px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
+  border-radius: 16px;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-header,
+.card-actions,
+.confirm-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Confirm Modal */
+.confirm-modal {
+  max-width: 420px;
+  padding: 24px;
+}
+
+.confirm-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+/* Deadline Badge */
+.deadline-badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  background: #e0f2fe;
+}
+
+.deadline-badge.urgent {
+  background: #fde68a;
+}
+/* More compact modal styles */
+
+.modal {
+  width: min(650px, 95%);
+  max-height: 85vh;
+  overflow-y: auto;
+  background: white;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  animation: slideIn 0.3s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 0 20px;
+  margin-bottom: 8px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 20px 20px 20px;
+}
+
+/* Smaller form groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 13px;
+}
+
+.filter-input,
+input[type="text"],
+input[type="date"],
+textarea,
+.status-select,
+.status-select-input {
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+textarea {
+  min-height: 70px;
+}
+
+/* Smaller tags */
+.skill-item,
+.language-item {
+  padding: 4px 10px;
+  font-size: 11px;
+}
+
+/* Smaller buttons in modal */
+.add-skill-btn,
+.add-language-btn {
+  padding: 8px 14px;
+  font-size: 12px;
+}
+
+.form-actions {
+  margin-top: 8px;
+  gap: 10px;
+}
+
+.form-actions button {
+  padding: 10px 16px;
+  font-size: 13px;
+}
+
+.status-select-input {
+  flex: 1;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  background: white;
+  cursor: pointer;
+}
+
+.status-select-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  
+}

@@ -1,0 +1,365 @@
+/* ============================================================
+   Applications Manager - Dark Theme (PortfolioHub v2)
+   Fully integrated with the global design system.
+   ============================================================ */
+
+/* Container */
+.applications-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: var(--sp-8);
+  background: transparent; /* Inherits from dashboard-layout */
+  min-height: calc(100vh - var(--navbar-h));
+}
+
+/* Header */
+.applications-header {
+  margin-bottom: var(--sp-8);
+}
+
+.applications-header h1 {
+  margin: 0 0 var(--sp-2) 0;
+  font-family: 'Sora', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 60%, #f472b6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.applications-header p {
+  color: var(--c-text-2);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+/* Suggested Section Header - Dark Red Theme */
+.suggested-section {
+  margin-bottom: var(--sp-10);
+  background: var(--c-red-bg);
+  border-radius: var(--r-xl);
+  padding: var(--sp-5);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.suggested-header {
+  margin-bottom: var(--sp-4);
+}
+
+.suggested-title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-1);
+}
+
+.suggested-icon {
+  font-size: 1.25rem;
+}
+
+.suggested-title h2 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fca5a5; /* Matches theme red */
+  letter-spacing: -0.01em;
+}
+
+.suggested-description {
+  margin: 0;
+  font-size: 0.72rem;
+  color: #f87171;
+  padding-left: 28px;
+}
+
+/* Grid Layout */
+.applications-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+/* Application Card */
+.application-card {
+  background: var(--c-surface);
+  border-radius: var(--r-xl);
+  padding: var(--sp-5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--sh-xs);
+  border: 1px solid var(--c-border);
+  transition: all var(--t-base);
+  position: relative;
+}
+
+.application-card:hover {
+  box-shadow: var(--sh-md);
+  transform: translateY(-2px);
+  border-color: var(--c-border-strong);
+}
+
+/* Suggested Card - Red left border (matched to theme) */
+.suggested-card {
+  border-left: 4px solid var(--c-red);
+}
+
+/* Favorite Badge - Red */
+.favorite-badge {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: var(--c-red);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--r-full);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Student Section */
+.student-section {
+  flex: 2;
+}
+
+.student-name {
+  margin: 0 0 var(--sp-1) 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--c-text);
+  font-family: 'Sora', sans-serif;
+}
+
+.student-major {
+  margin: 0 0 var(--sp-3) 0;
+  font-size: 0.75rem;
+  color: var(--c-text-2);
+  font-weight: 500;
+}
+
+.student-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-5);
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 0.8rem;
+  color: var(--c-text-2);
+}
+
+.detail-icon {
+  font-size: 0.9rem;
+  color: var(--c-primary);
+}
+
+/* Internship Section */
+.internship-section {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--sp-3);
+  
+}
+
+.internship-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #93c5fd;
+  background: var(--c-primary-light);
+  padding: 6px 16px;
+  border-radius: var(--r-full);
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid var(--c-primary-mid);
+}
+
+/* Status Dropdown */
+.status-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.status-dropdown {
+  padding: 8px 20px;
+  border-radius: var(--r-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: 'DM Sans', sans-serif;
+  transition: all var(--t-fast);
+  min-width: 130px;
+  background: var(--c-surface-2);
+  color: var(--c-text-2);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 32px;
+}
+
+.status-dropdown:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.status-nominated {
+  background: var(--c-yellow-bg);
+  color: #fcd34d;
+  border-color: rgba(245,158,11,0.25);
+}
+
+.status-accepted {
+  background: var(--c-green-bg);
+  color: #6ee7b7;
+  border-color: rgba(16,185,129,0.25);
+}
+
+.status-rejected {
+  background: var(--c-red-bg);
+  color: #fca5a5;
+  border-color: rgba(239,68,68,0.25);
+}
+
+/* All Applications Section */
+.all-applications-section {
+  margin-top: var(--sp-6);
+}
+
+.all-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+}
+
+.all-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--c-text);
+  font-family: 'Sora', sans-serif;
+}
+
+.count-badge {
+  background: var(--c-surface-2);
+  color: var(--c-text-2);
+  padding: 4px 12px;
+  border-radius: var(--r-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+  border: 1px solid var(--c-border);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--c-surface);
+  border-radius: var(--r-xl);
+  border: 1px solid var(--c-border);
+}
+
+.empty-state span {
+  font-size: 48px;
+  display: block;
+  margin-bottom: var(--sp-3);
+  opacity: 0.6;
+}
+
+.empty-state p {
+  color: var(--c-muted);
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .application-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--sp-5);
+  }
+  
+  .internship-section {
+    align-items: flex-start;
+  }
+  
+  .status-container {
+    width: 100%;
+  }
+  
+  .status-dropdown {
+    width: 100%;
+  }
+  
+  .internship-name {
+    white-space: normal;
+    text-align: left;
+  }
+  
+  .suggested-card {
+    border-left: 4px solid var(--c-red);
+    border-top: 1px solid var(--c-border);
+  }
+}
+
+@media (max-width: 768px) {
+  .applications-container {
+    padding: var(--sp-5);
+  }
+  
+  .applications-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .student-details {
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+  
+  .suggested-section {
+    padding: var(--sp-4);
+  }
+  
+  .suggested-title h2 {
+    font-size: 0.85rem;
+  }
+}
+
+/* Additional refinements for perfect dark integration */
+.status-dropdown:focus {
+  outline: none;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+}
+
+/* Ensure proper spacing when sidebar is open */
+.main-content-area.sidebar-open .applications-container {
+  margin-right: 0; /* Keeps consistency */
+}
+
+/* Remove any light backgrounds lingering */
+.applications-container * {
+  background-color: transparent where possible;
+}
+
+.application-card,
+.empty-state,
+.suggested-section {
+  background: var(--c-surface);
+}
+
+.suggested-section {
+  background: rgba(239, 68, 68, 0.05);
+}
+
