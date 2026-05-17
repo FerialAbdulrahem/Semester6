@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/gui/OSSimulatorApp.java=UTF-8
+encoding//src/gui/SimulationEngine.java=UTF-8
+encoding//src/os/interpreter/Interpreter.java=UTF-8
+encoding//src/os/syscalls/FileHandler.java=UTF-8
+encoding//src/os/syscalls/Mutex.java=UTF-8
+encoding//src/os/syscalls/SystemCall.java=UTF-8
